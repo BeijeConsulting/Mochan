@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Lato&display=swap" rel="stylesheet">
+    <title>Cesio Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Cesio Calculator</h1>
+        </div>
+        <div class="result">
+        <p id="display" class="nres">0</p>
+        </div>
+        <div class="subcont">
+        <div class="line">
+            <div class="number" onclick="push(1)">1</div>
+            <div class="number" onclick="push(2)">2</div>
+            <div class="number" onclick="push(3)">3</div>
+            <div class="number">+</div>
+        </div>    
+<div class="line">
+            <div class="number" onclick="push(4)">4</div>
+            <div class="number" onclick="push(5)">5</div>
+            <div class="number" onclick="push(6)">6</div>
+            <div class="number">-</div>
+        </div>   
+<div class="line">
+            <div class="number" onclick="push(7)">7</div>
+            <div class="number" onclick="push(8)">8</div>
+            <div class="number" onclick="push(9)">9</div>
+            <div class="number">*</div>
+        </div>   
+<div class="line">
+            <div class="number reset" onclick="reset()">AC</div>
+            <div class="number" onclick="push(0)">0</div>
+            <div class="number" onclick="decimal()">,</div>
+            <div class="number">/</div>
+        </div>   
+<div class="fline"> =
+</div>
+</div>
+</div>
+</body>
+
+<script>
+var display = document.getElementById('display');
+var d = 0;
+var isDecimal = false;
+var levelDecimal = 1;
+
+function push(value) {
+	console.log(value);
+	if (isDecimal) {
+		d = d + (value / levelDecimal);
+		levelDecimal = levelDecimal * 10;
+	} else {
+		d = (d * 10) + value;
+	}
+	display.innerHTML = d;
+}
+
+function reset() {
+	d = 0;
+	isDecimal = false;
+	levelDecimal = 1;
+	display.innerHTML = d;
+}
+
+function decimal() {
+	isDecimal = true;
+	levelDecimal = 10;
+}
+</script>
+</html>
