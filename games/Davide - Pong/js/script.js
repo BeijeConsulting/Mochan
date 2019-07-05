@@ -1,6 +1,7 @@
 var lineTop = document.getElementById("lineTop");
 var lineBot = document.getElementById("lineBot");
 var ball = document.getElementById("ball");
+var box = document.getElementById("box-game");
 var pos = 100;
 var posB = 200;
 var vertical = 0;
@@ -20,23 +21,33 @@ function checkKey(e) {
         //lineTop.style.top = parseInt(lineTop.style.top) + 5 + 'px'; // down arrow
     }
     else if (e.keyCode == '37' && pos>0) {
-        lineTop.style.left = pos - 10 + 'px'; // left arrow
-        lineBot.style.left = pos - 10 + 'px';
         pos=pos-10;
+        lineTop.style.left = pos + 'px'; // left arrow
+        lineBot.style.left = pos + 'px';
+        
     }
     else if (e.keyCode == '39' && pos<200) {
-        lineTop.style.left = pos + 10 + 'px'; // right arrow
-        lineBot.style.left = pos + 10 + 'px';
         pos=pos+10;
+        lineTop.style.left = pos + 'px'; // right arrow
+        lineBot.style.left = pos + 'px';
+        
     }
 }
+var rand= 0;
 var animation = setInterval(draw,15);
 function draw(){
     ball.style.top = posB + 'px';
+    ball.style.left = posBX + 'px';
+    posBX = posBX + rand;
+    console.log(posBX);
+    if(posBX<1||posBX>230){
+        rand=rand*(-1);
+    }
     if(vertical==0){
-        posB = posB-5;
+        posB = posB-3;
         if (isCollapsed(ball, lineTop)){
             vertical=1;
+            rand= Math.floor(Math.random() * 5) -2;
         }
         else {
             if(posB<-30){
@@ -47,9 +58,10 @@ function draw(){
             //clearInterval(animation);
         }
     }else{
-        posB = posB+5;
+        posB = posB+3;
         if (isCollapsed(ball, lineBot)){
             vertical=0;
+            rand= Math.floor(Math.random() * 5) + -2;
         }
         else{
             if(posB>430){
@@ -73,8 +85,8 @@ function isCollapsed(dragMe, rect){
     else{
       return false;
     }
-  }
-  function restart(){
+}
+function restart(){
     document.getElementById("restart").style.display="none";  
     posB=200;
     posBX=115;
@@ -84,4 +96,8 @@ function isCollapsed(dragMe, rect){
     ball.style.top = posB + 'px';
     ball.style.left = posBX + 'px';
     animation = setInterval(draw,15);
-  }
+    rand= 0;
+}
+function changeDir(){
+
+}
