@@ -1,0 +1,22 @@
+.container{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: green;
+  position: fixed;
+
+
+}
+
+
+
+
+
+/*  <script>
+document.addEventListener("keypress", function(event) {
+        alert(event.keyCode);
+        //vostro codice...
+})
+</script>*/
