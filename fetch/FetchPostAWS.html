@@ -1,0 +1,44 @@
+<html>
+<body>
+<script>
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+
+    method: 'POST',
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    },
+    body: '{"title":"foo","body":"bar","userId":"1"}'
+    })
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+  fetch('https://jsonplaceholder.typicode.com/users', {
+
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      },
+      body: JSON.stringify({
+        "name": "Mario",
+        "username": "Rossi",
+        "email": "mario.rossi@beije.interval",
+        "address": {
+          "street": "Roma",
+          "suite": "Apt. 777",
+          "city": "Milano",
+          "zipcode": "21924",
+          "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+          },
+          }
+          })
+        })
+
+    .then(response => response.json())
+    .then(json => console.log(json))
+</script>
+</body>
+</html>
+<p id='demo'> Test sending REST request with a POST method</p>

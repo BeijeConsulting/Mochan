@@ -1,0 +1,31 @@
+<html>
+<body>
+<div class="prova">
+  <p id="d1" >Prova </p>
+  <p id="d2" >Prova </p>
+  <p id="d3" >Prova </p>
+  <p id="d4" >Prova </p>
+</div>
+<script>
+for (i=1; i<5; i++){
+  fetch("https://reqres.in/api/users?page=" + i)
+    .then(response => response.json()) //carica il jason dalla chiama
+    .then(json => {// quando avro il jason inizio a fare qualcosa
+    //document.getElementById('demo').innerHTML = json.data[2].first_name;
+      let lenth2 = json.data.length
+      let v = "";
+      for (j=0; j<lenth2; j++) {
+        v += "<li>" + '<img src="'+ json.data[j].avatar + '">' + " The user Id is " + json.data[j].id +"  " + " The user name is " + json.data[j].first_name + " "+ json.data[j].last_name //"<a href=" + json.data[i].avatar + ">Foto del User </a> " + "<li>";
+        document.getElementById('d1').innerHTML = v;
+      }
+
+
+
+
+  })//fetch
+}//1for
+
+
+</script>
+</body>
+</html>
