@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2>...</h2>
+<p> ...</p>
+
+
+<form  id=timeSheetForm action="" method="get" onsubmit="return confirm('Are you sure you want to submit?');" >
+Id: <br>
+<input 'Id' type="int" id=attId value="0" name="id"> <br>
+first name: <br>
+<input 'name' type="text" id=firstName value="Mario" name="fname"> <br>
+last name: <br>
+<input type="text" id=lastName value="Rossi" name="lname"><br>
+personal email: <br>
+<input type="email" id=personalEmail value="Mario@rossi.it" name="pmail"><br>
+workEmail:<br>
+<input type="email" id=workEmail value="Mario.rossi@beije.it" name="wmail"><br>
+fiscalCode:<br>
+<input type="text" id=fiscaleCode value="ABCDEF123456" name="fcode"><br>
+password:<br>
+<input type="password" id="pass" name="password"
+<br><br>
+<input type="submit">
+</form>
+
+<script>
+
+/*let myForm = document.getElementById('timeSheetForm');*/
+var formData = new FormData();
+console.log(formData);
+
+for(var pair of formData.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+}
+</script>
+</body>
+</html>

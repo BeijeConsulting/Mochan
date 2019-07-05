@@ -1,0 +1,16 @@
+<style media="screen">
+div.static {
+  position: static;
+  width: 99%;
+  height: 99%;
+  border: 3px solid #00AF20;
+}
+.square {
+  position : relative;
+  top : 50px;
+  left : 50px;
+  height: 100px;
+  width: 100px;
+  background-color: #555;
+}
+</style>

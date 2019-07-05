@@ -1,0 +1,51 @@
+<!--JavaScript - Move Object with Arrow Keys using JavaScript Function.-->
+<html>
+	<head link rel=¨stylesheet¨ type=¨text/css¨ href=¨moveObject.css¨>
+
+		<script type="text/javascript">
+			//init object globally
+			var objBox= null;
+			function init(){
+				objBox=document.getElementById("box");
+				objBox.style.position='relative';
+				objBox.style.left='50px';
+				objBox.style.top='50px';
+			}
+				function getKeyAndMove(e){
+					var key_code = e.keyCode;
+					if(key_code == 37) {
+						moveLeft()
+					} //left arrow key
+					else if (key_code == 38) {
+						moveUp()
+					} //Up arrow key
+					else if (key_code == 39) {
+						moveRight()
+					}//right arrow key
+					else if (key_code == 40) {
+							moveDown()
+						}//down arrow key
+
+				}
+			function moveLeft(){
+				objBox.style.left=parseInt(objBox.style.left)-3 +'px';
+			}
+			function moveUp(){
+				objBox.style.top=parseInt(objBox.style.top)-3 +'px';
+			}
+			function moveRight(){
+				objBox.style.left=parseInt(objBox.style.left)+3 +'px';
+			}
+			function moveDown(){
+				objBox.style.top=parseInt(objBox.style.top)+3 +'px';
+			}
+			window.onload=init;
+		</script>
+	</head>
+
+	<body onkeydown='getKeyAndMove(event)'>
+		<div class="static"> <div id = "box" class="square"> </div>
+		</div>
+
+	</body>
+</html>
