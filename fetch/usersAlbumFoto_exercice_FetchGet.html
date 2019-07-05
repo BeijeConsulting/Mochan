@@ -1,0 +1,61 @@
+<html>
+<body>
+<p id= 'users' > Prova </p>
+<p id= 'albums'> Prova </p>
+<p id= 'fotos' > Prova </p>
+<script>
+
+function getLinkAlbum(userId,name) {
+  return '<a href="#" onclick="getAlbumByUserId('+userId+')">'+name+"</a>";
+}
+
+function getLinkPhoto(albumId,title) {
+  return '<a href="#" onclick="getPhotoByAlbumId('+albumId+')">'+title+"</a>";
+}
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => {
+    console.log(json);
+    let txt = "";
+
+    json.forEach(el => {
+      console.log(el.name);
+      txt = txt + getLinkAlbum(el.userId,el.name) + "<br>";
+    })
+    document.getElementById('users').innerHTML = txt;
+  })
+
+function getAlbumByUserId(id){
+
+  fetch('https://jsonplaceholder.typicode.com/albums?userId='+id)
+    .then(response => response.json())
+    .then(json => {
+
+      let txts = "";
+      json.forEach(el => {
+        console.log(el.title);
+        txts = txts + getLinkPhoto(el.albumId,el.title) + "<br>";
+      })
+      document.getElementById('albums').innerHTML = txts;
+    })
+}
+
+/*function getfotoByAlbumId(id){
+
+  fetch('https://jsonplaceholder.typicode.com/photos?albumId='+id)
+    .then(response => response.json())
+    .then(json => {
+      let stxts = "";
+      json.forEach(el => {
+        console.log(el.url);
+        stxts = stxts + getAlbumByUserId(el.url) + "<br>";
+      })
+      document.getElementById('fotos').innerHTML = stxts;
+    })
+}*/
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+function getKeyAndMove(e){
+				var key_code=e.keyCode;
+				
+				if(key_code == 37) {moveLeft()} //left arrow key
+						
+				else if (key_code = 38) {moveUp()} //Up arrow key
+						
+				else if (key_code = 39) {moveRight()}//right arrow key
+						
+				else if (key_code = 40) {	moveDown()}//down arrow key
+					
+			}

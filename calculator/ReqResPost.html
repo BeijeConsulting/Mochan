@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+
+fetch('https://reqres.in/api/users', {
+
+    method: 'POST',
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    },
+    body:JSON.stringify({
+      "name": "Mario",
+      "username": "Rossi",
+      "email": "mario.rossi@beije.interval",
+      "address": {
+        "street": "Roma",
+        "suite": "Apt. 777",
+        "city": "Milano",
+        "zipcode": "21924",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        },
+        }
+        })
+    })
+  .then(response => response.json())
+  .then(json => console.log(json))
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json()) //carica il jason dalla chiama
+  .then(json => {// quando avro il jason inizio a fare qualcosa
+    console.log(json);
+    document.getElementById('demo').innerHTML = json[50].id;
+  })
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json()) //carica il jason dalla chiama
+    .then(json => {// quando avro il jason inizio a fare qualcosa
+      console.log(json);
+      document.getElementById('dem').innerHTML = json[5].userId;
+    })
+
+</script>
+<p id= 'demo' >Prova </p>
+<p id= 'dem' >Prova </p>
+</body>
+</html>
