@@ -6,13 +6,20 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
     </head>
     <body>
-        <div class="box-game">
-            <div class="circle"></div>
-            <div class="line-center"></div>
-            <div id="ball"></div>
-            <div id="lineTop" class="line"></div>
-            <div id="lineBot" class="line" style="top:396px;"></div>
-            <button id="restart" onclick="restart()" style="display: none;">CONTINUA</button>
+        <div id="container" onmousemove="move(event)">
+            <div id="box-game">
+                <div id="box-score">
+                    <div id="scoreA" class="score">0</div>
+                    <div id="scoreB" class="score">0</div>
+                </div>
+                <div class="circle"></div>
+                <div class="line-center"></div>
+                <div id="ball"></div>
+                <div id="lineTop" class="line" style="left: 0px;"></div>
+                <div id="lineBot" class="line" style="top: 596px; left: 0px;"></div>
+                <div id="overlay" style="display: block;"></div>
+                <button id="restart" onclick="restart()" style="display: block;">START</button>
+            </div>
         </div>
         <script type="text/javascript" src="./js/script.js"></script>
     </body>
