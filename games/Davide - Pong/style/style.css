@@ -3,19 +3,20 @@ body{
     font-family: Lato;
 }
 .line{
-    width:50px;
+    width:70px;
     height: 4px;
     background-color:green;
     position:absolute;
 }
-.box-game{
+#box-game{
     position: relative;
-    width: 250px;
+    width: 50%;
     margin: auto;
-    height: 400px;
-    background-color: gainsboro;
+    height: 600px;
+    background-color: #dde3e1;
     border: 1px solid black;
     overflow: hidden;
+    max-width: 600px;
 }
 .circle {
     width: 100px;
@@ -62,4 +63,27 @@ button#restart {
     background: #00ab00;
     color: white;
     font-weight: 800;
+    z-index: 2;
+}
+div#overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 2;
+}
+div#container {
+    display: flex;
+}
+div#box-score {
+    position: absolute;
+    height: 68px;
+    font-size: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 4px;
+    color: #0000bf;
+    font-family: sans-serif;
 }
