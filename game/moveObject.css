@@ -1,13 +1,13 @@
 <style media="screen">
-div.static {
+.static {
   position: static;
   width: 99%;
   height: 99%;
-  border: 3px solid #00AF20;
+  border: 31px solid #00AF20;
 }
 .square {
   position : relative;
-  top : 50px;
+  top : bottom: 50px ;
   left : 50px;
   height: 100px;
   width: 100px;
