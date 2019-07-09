@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="master.css">
+    <script src="tris.js"></script>
+</head>
+<body onload="createArray()">
+    <div class="header"><button class="nGameBtn" onclick="nuovoGioco()">Nuovo gioco</button></div>
+    <div class="container">
+
+        <h1 id="container">__________</h1>
+        <table>
+            <tr>
+                <td class="down ">
+                    <div class="btn" id="c1" onmousedown="press(0)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down ">
+                    <div class="btn" id="c2" onmousedown="press(1)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down">
+                    <div class="btn" id="c3" onmousedown="press(2)" onmouseover="colorChoice(this)"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="down ">
+                    <div class="btn" id="c4" onmousedown="press(3)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down ">
+                    <div class="btn" id="c5" onmousedown="press(4)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down">
+                    <div class="btn" id="c6" onmousedown="press(5)" onmouseover="colorChoice(this)"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="down ">
+                    <div class="btn right" id="c7" onmousedown="press(6)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down ">
+                    <div class="btn right" id="c8" onmousedown="press(7)" onmouseover="colorChoice(this)"></div>
+                </td>
+                <td class="down ">
+                    <div class="btn" id="c9" onmousedown="press(8)" onmouseover="colorChoice(this)"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#pg {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 50;
+}
+
+#ostacolo {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 200px;
+  left: 500px;
+  z-index: 1;
+}
