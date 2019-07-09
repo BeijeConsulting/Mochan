@@ -44,7 +44,7 @@ function draw(){
         rand=rand*(-1);
     }
     if(vertical==0){
-        posB = posB-3;
+        posB = posB-5;
         if (isCollapsed(ball, lineTop)==1){
             vertical=1;
             if(rand<0){
@@ -72,7 +72,7 @@ function draw(){
             //clearInterval(animation);
         }
     }else{
-        posB = posB+3;
+        posB = posB+5;
         if (isCollapsed(ball, lineBot)==1){
             vertical=0;
             if(rand<0){
@@ -128,12 +128,13 @@ function isCollapsed(dragMe, rect){
 var oldX;
 function move(e) {
     var x = e.clientX;
+    var spostamento = 8;
     if (oldX<x&&pos<boxWidth-70){
-        pos=pos+3;
+        pos=pos+spostamento;
         lineTop.style.left = pos + 'px'; // right arrow
         lineBot.style.left = pos + 'px';
     }else if(pos>0){
-        pos=pos-3;
+        pos=pos-spostamento;
         lineTop.style.left = pos + 'px'; // left arrow
         lineBot.style.left = pos + 'px';
     }

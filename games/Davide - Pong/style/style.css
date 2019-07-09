@@ -16,7 +16,7 @@ body{
     background-color: #dde3e1;
     border: 1px solid black;
     overflow: hidden;
-    max-width: 600px;
+    max-width: 350px;
 }
 .circle {
     width: 100px;
