@@ -44,7 +44,11 @@ function draw(){
         rand=rand*(-1);
     }
     if(vertical==0){
+<<<<<<< HEAD
         posB = posB-5;
+=======
+        posB = posB-3;
+>>>>>>> c0b590f504968dd71c896674f6d4726532576dff
         if (isCollapsed(ball, lineTop)==1){
             vertical=1;
             if(rand<0){
@@ -72,7 +76,11 @@ function draw(){
             //clearInterval(animation);
         }
     }else{
+<<<<<<< HEAD
         posB = posB+5;
+=======
+        posB = posB+3;
+>>>>>>> c0b590f504968dd71c896674f6d4726532576dff
         if (isCollapsed(ball, lineBot)==1){
             vertical=0;
             if(rand<0){
@@ -128,6 +136,7 @@ function isCollapsed(dragMe, rect){
 var oldX;
 function move(e) {
     var x = e.clientX;
+<<<<<<< HEAD
     var spostamento = 8;
     if (oldX<x&&pos<boxWidth-70){
         pos=pos+spostamento;
@@ -135,6 +144,14 @@ function move(e) {
         lineBot.style.left = pos + 'px';
     }else if(pos>0){
         pos=pos-spostamento;
+=======
+    if (oldX<x&&pos<boxWidth-70){
+        pos=pos+3;
+        lineTop.style.left = pos + 'px'; // right arrow
+        lineBot.style.left = pos + 'px';
+    }else if(pos>0){
+        pos=pos-3;
+>>>>>>> c0b590f504968dd71c896674f6d4726532576dff
         lineTop.style.left = pos + 'px'; // left arrow
         lineBot.style.left = pos + 'px';
     }
