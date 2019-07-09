@@ -7,37 +7,39 @@
 <p> ...</p>
 
 
-<form  id=timeSheetForm action="" method="get" onsubmit="return confirm('Are you sure you want to submit?');" >
-Id: <br>
-<input 'Id' type="int" id=attId value="0" name="id"> <br>
+<form  id=tsform action="" method="get" onsubmit="return confirm('Are you sure you want to submit?');" > <br>
+<input type="int" id=id value="0" name="id"> <br>
 first name: <br>
-<input 'name' type="text" id=firstName value="Mario" name="fname"> <br>
+<input type="text" id=fname value="Mario" name="fname"> <br>
 last name: <br>
-<input type="text" id=lastName value="Rossi" name="lname"><br>
+<input type="text" id=lname value="Rossi" name="lname"><br>
 personal email: <br>
-<input type="email" id=personalEmail value="Mario@rossi.it" name="pmail"><br>
+<input type="email" id=pemail value="Mario@rossi.it" name="pmail"><br>
 workEmail:<br>
-<input type="email" id=workEmail value="Mario.rossi@beije.it" name="wmail"><br>
+<input type="email" id=wemail value="Mario.rossi@beije.it" name="wmail"><br>
 fiscalCode:<br>
-<input type="text" id=fiscaleCode value="ABCDEF123456" name="fcode"><br>
+<input type="text" id=fcode value="ABCDEF123456" name="fcode"><br>
 password:<br>
-<input type="password" id="pass" name="password"
-<br><br>
+<input type="password" id="pwd" name="password" <br>
+<br>
 <input type="submit">
 </form>
 
 <script>
-let b = ""
-let formd = document.getElementById('timeSheetForm');
-var formd = new FormData();
-//console.log(formData);
 
-for(var pair of formd.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+var formData = new FormData();
+formData.append('id', '7');
+formData.append('fname', 'value2');
+formData.append('lname', '');
+formData.append('pemail', 'value2');
+formData.append('wemail', '');
+formData.append('fcode', 'value2');
+formData.append('pwd', 'value2');
 
-
+// Display the values
+for (var value of formData.values()) {
+   console.log(value);
 }
-console.log(formd);
 </script>
 </body>
 </html>
