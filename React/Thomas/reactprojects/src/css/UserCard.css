@@ -1,0 +1,40 @@
+.scheda {
+    position: relative;
+    border: 2px solid rgba(134, 163, 209, .6);
+    border-radius: 10px;
+    margin: 50px;
+    background-color: white;
+    padding: 10px;
+}
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    width: 200px;
+    height:200px;
+    top: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+.scheda:hover .hidden{
+    visibility: visible;
+    background-image: linear-gradient(45deg, rgba(134, 163, 209, .6),rgba(222, 40, 155,.6));
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.imgcard {
+    border-radius: 50%;
+}
+
+.hiddentext {
+    visibility: hidden;
+}
