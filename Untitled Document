@@ -1,0 +1,6 @@
+"state react:"
+oggetto di un componente rapresenta lo stato dello stato.
+-cambio dello stato => aggiornamento dell'oggetto.
+props=> valori immutabili !state
+
+funzione anonima quando si usa solo una volta e non piu

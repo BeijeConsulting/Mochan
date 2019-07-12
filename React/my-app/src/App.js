@@ -17,8 +17,7 @@ class App extends React.Component {
     this.setState(state => ({
         email : document.getElementById('email').value,
         password : document.getElementById('password').value
-      }),
-      () => {
+      }), () => {
         console.log('email : ', this.state.email);
         console.log('password : ', this.state.password);
       }
