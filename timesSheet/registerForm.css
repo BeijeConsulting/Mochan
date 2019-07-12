@@ -38,8 +38,22 @@ hr {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
+<<<<<<< HEAD
+=======
+  margin: 8px 0;
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
   border: none;
   cursor: pointer;
   width: 26%;
   opacity: 0.9;
 }
+<<<<<<< HEAD
+=======
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
