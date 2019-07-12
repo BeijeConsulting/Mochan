@@ -1,0 +1,11 @@
+.Header {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  left: 300 px;
+  right: 0 px;
+  height: 300 px;
+  background-color: azure;  
+  position: relative ;  
+}
