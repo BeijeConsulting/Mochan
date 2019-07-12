@@ -38,3 +38,8 @@ a {
 .hiddentext {
     visibility: hidden;
 }
+
+.schedalink:hover {
+    text-decoration: darkblue underline;
+    color: darkblue;
+}
