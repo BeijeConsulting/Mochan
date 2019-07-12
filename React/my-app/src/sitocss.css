@@ -1,0 +1,55 @@
+.container{
+background-color: grey;
+text-align: center;
+height: 300px;
+
+}
+
+.body {
+
+background-color: #980000;
+
+}
+
+
+.title{
+
+text-align: center;
+}
+
+
+
+.container1{
+
+}
+
+
+.textarea1{
+  /* text-align: right; */
+float: left;
+background-color: grey;
+width: 500px;
+/* display: flex; */
+}
+
+.textarea2{
+float: left;
+/* text-align: center */
+background-color: grey;
+width: 500px;
+/* display:flex; */
+}
+
+.testo{
+font-size: 20px;
+width: 400px;
+
+}
+
+.botton {
+font-size: 20px;
+width: 200px;
+align-items: center;
+height: 70px;
+display: flex;
+}

@@ -1,0 +1,10 @@
+.main{
+text-align: center;
+height: 1500px;
+border-style: dotted;
+margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 20px;
+margin-top: 50px;
+display: flex;
+}

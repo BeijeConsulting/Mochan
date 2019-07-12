@@ -1,0 +1,35 @@
+.container{
+margin-top: 60px;
+
+}
+
+.box{
+text-align: center;
+border-style: groove;
+width: 150px;
+height: 180px;
+float: left;
+margin-top: 50px;
+margin-left: 40px;
+
+
+}
+
+
+ .testo {
+  border-bottom-style: ridge;
+}
+
+
+.imm {
+   width: 50px;
+   height: 50px;
+   align-items: center;
+
+
+}
+/* .testo{
+
+border-bottom-style: ridge;
+
+} */
