@@ -1,0 +1,26 @@
+.comment {
+    text-align: left;
+    padding: 10px;
+    margin: 5px 0;
+    background: #49485b;
+    box-shadow: 0 0 3px black;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+}
+.comment-author {
+    font-size: 14px;
+    font-weight: 700;
+}
+button.back-comment {
+    border: 0;
+    background: transparent;
+    font-family: Montserrat;
+    border-top: 1px solid #49485b;
+    padding-top: 5px;
+    margin-top: 5px;
+    width: 60%;
+}
+button.back-comment.show {
+    margin-top: 15px;
+}
