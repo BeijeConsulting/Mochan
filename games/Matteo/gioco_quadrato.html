@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link rel="stylesheet" type="text/css" href="./square.css">
+
+
+
+
+
+</head>
+
+<body onkeydown='muovi(event)'>
+
+  <div class="container" id="quadrato">
+
+  </div>
+
+  <script type="text/javascript">
+
+  var d = null;
+
+
+  function init() {
+
+  d = document.getElementById('quadrato');
+  d.style.left='50px';
+  d.style.top='50px';
+  d.style.down='50px';
+
+  }
+
+
+  function muovi(e) {
+
+     document.addEventListener("keypress", function(event) {
+      var x = event.keyCode;
+      console.log(x)
+
+          if(x == 103){
+            let l = d.style.left;
+            let j = l.split('p')[0];
+            j = parseInt(j);
+            d.style.left=j+1+'px';
+          }
+
+          else if(x == 102) {
+            let u = d.style.down;
+            let k = u.split('p')[0];
+            k = parseInt(k);
+            d.style.down=k-1+'px';
+          }
+
+         else if(x == 118) {
+           // let u = d.style.down;
+           // let k = u.split('p')[0];
+           // k = parseInt(k);
+            d.style.top=parseInt(d.style.top)+1+'px';
+         }
+
+         else if(x == 116) {
+           d.style.top=parseInt(d.style.top)-1+'px';
+        }
+
+     })
+  }
+
+  window.onload = init();
+
+
+  </script>
+
+</body>
+
+
+
+
+
+
+</html>
