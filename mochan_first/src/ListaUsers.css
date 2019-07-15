@@ -1,0 +1,11 @@
+.users__main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,23 @@
+.main_Users {
+    width: 100%;
+}
+
+.user_Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_Preview {
+    background-color: teal;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    margin: 30px;
+}
+
+img {
+    margin: 20px;
+    width: 50%;
+}
