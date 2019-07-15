@@ -18,9 +18,14 @@ button.back-comment {
     font-family: Montserrat;
     border-top: 1px solid #49485b;
     padding-top: 5px;
-    margin-top: 5px;
-    width: 60%;
-}
-button.back-comment.show {
+    display: flex;
+    margin: auto;
     margin-top: 15px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+img.comment-icon {
+    height: 20px;
+    margin-right: 10px;
 }

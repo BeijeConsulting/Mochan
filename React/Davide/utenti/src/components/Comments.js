@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Comments.css';
+import chat from './chat.svg'
 
 class Comments extends Component {
     constructor(props){
@@ -29,7 +30,18 @@ class Comments extends Component {
         const comments = this.state.json.map((comment) =>
             <div key={comment.id} className="comment"><div className="comment-author">{comment.email}</div><div className="comment-text">{comment.body}</div></div>
         );
-        return this.state.comment===1 ? <div className="box-comments">{comments}<button className="back-comment" onClick={()=>this.back()}>Nascondi i commenti</button></div> : <button className="back-comment show" onClick={()=>this.setState({comment:1})}>Leggi i commenti</button>;
+        return this.state.comment===1 ? 
+            <div className="box-comments">
+                {comments}
+                <button className="back-comment" onClick={()=>this.back()}>
+                    Nascondi i commenti
+                </button>
+            </div> 
+            : 
+            <button className="back-comment" onClick={()=>this.setState({comment:1})}>
+                <img src={chat} alt="comment-icon" className="comment-icon"></img>
+                Leggi i commenti
+            </button>
         
     }
 
