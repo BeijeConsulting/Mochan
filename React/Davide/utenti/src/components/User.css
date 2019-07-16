@@ -1,8 +1,8 @@
 img.user-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 10px;
+    height: 170px;
+    width: 170px;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 .user-container {
     width: 170px;
@@ -19,11 +19,10 @@ a {
     color: white;
 }
 .user-info {
-    padding: 15px 0;
+    padding-bottom: 15px;
 }
 .link-card {
-    padding: 5px 0;
-    border-top: 1px solid #8e8e8e;
+    padding: 10px 0;
 }
 .box-link {
     background: #201e38;

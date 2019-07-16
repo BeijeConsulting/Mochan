@@ -79,6 +79,8 @@ p {
 span.title-info {
     font-variant: small-caps;
     font-size: 20px;
+    font-weight: 900;
+    font-family: Lato;
 }
 .line-info {
     height: 1px;
