@@ -1,0 +1,29 @@
+img.user-img {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.user-container {
+    width: 170px;
+    background-image: linear-gradient(45deg, #4f859a, #ff8383);
+    box-shadow: 0 0 13px 0px #484848;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 13px;
+    border: 1px solid #909090;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.user-info {
+    padding-bottom: 15px;
+}
+.link-card {
+    padding: 10px 0;
+}
+.box-link {
+    background: #201e38;
+}

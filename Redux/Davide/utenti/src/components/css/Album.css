@@ -1,0 +1,33 @@
+.album {
+    width: 150px;
+    height: 150px;
+    background: #2c3d44;
+    border-radius: 10px;
+    color: white;
+    margin: 3px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 0 3px #5d5d5d;
+}
+.albums-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.album-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.foto-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    border-top: 1px solid white;
+    width: 90%;
+    margin: auto;
+    font-variant: small-caps;
+    font-size: 14px;
+}

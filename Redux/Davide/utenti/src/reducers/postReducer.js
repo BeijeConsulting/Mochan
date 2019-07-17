@@ -19,6 +19,8 @@ const postReducer = (state = initialState,action) => {
         case 'LOAD_USER':
             return {
                 ...state,
+                album: 0,
+                active: 0,
                 user: action.data
             }
         case 'CHANGE_TAB':
