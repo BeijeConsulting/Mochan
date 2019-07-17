@@ -1,0 +1,8 @@
+body {
+    background-image: linear-gradient(0deg, rgba(222, 40, 155,.6),#FFF);
+    background-size: cover;
+}
+
+.flexdir {
+    display: flex;
+}

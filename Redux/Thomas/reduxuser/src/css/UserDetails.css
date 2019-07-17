@@ -1,0 +1,17 @@
+.sidebar {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.UserImg {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin: 10px;
+}
+
+.anagraf, .JobDet {
+    margin: 10px;
+    text-align: center;
+}
