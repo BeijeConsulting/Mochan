@@ -103,3 +103,6 @@ img.user-img-profile {
     color: black;
     padding: 0 20px;
 }
+p.info-text {
+    text-align: center;
+}

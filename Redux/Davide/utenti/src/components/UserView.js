@@ -4,14 +4,14 @@ import './css/UserView.css';
 import Album from "./Album.js";
 import Tabs from "./Tabs.js";
 import Posts from "./Posts.js";
+import UserInfo from "./UserInfo.js";
 
 class UserView extends Component {
     componentDidMount(){
         window.scrollTo(0, 0);
-        const str = window.location.search;
-        const pieces =str.split("=");
-        const query =pieces[pieces.length-1];
-        var url = 'https://jsonplaceholder.typicode.com/users/' + query;
+        var search_params = new URLSearchParams(window.location.search); 
+        const userId = search_params.get('user');
+        var url = 'https://jsonplaceholder.typicode.com/users/' + userId;
         fetch(url)
         .then(response => response.json())
         .then(json => {
@@ -23,57 +23,28 @@ class UserView extends Component {
         )
     }
     render() {
-        const str = window.location.search;
-        const pieces =str.split("=");
-        const query =pieces[pieces.length-1];
+        var search_params = new URLSearchParams(window.location.search); 
+        const userId = search_params.get('user');
         return (
             <div className="container">
                 <div className="user-box">
                     <div className="user-left">
-                        <img src={require("./users/user"+query+".jpeg")} className="user-img-profile" alt="user-img" /><br></br>
+                        <img src={require("./users/user"+userId+".jpeg")} className="user-img-profile" alt="user-img" /><br></br>
                         <div id="user-info"> 
-                            <div className="info-box">
-                                <span className="title-info">nome</span>
-                                <div className="line-info"></div>
-                                <b>{this.props.user.name}</b>
-                            </div>
-
-                            <div className="info-box">
-                                <span className="title-info">username</span>
-                                <div className="line-info"></div>
-                                <i>{this.props.user.username}</i>
-                            </div>
-
-                            <div className="info-box">
-                                <span className="title-info">contatti</span>
-                                <div className="line-info"></div>
-                                {this.props.user.email}<br></br>
-                                {this.props.user.phone}<br></br>
-                                {this.props.user.website}
-                            </div>
-
-                            <div className="info-box">
-                                <span className="title-info">abitazione</span>
-                                <div className="line-info"></div>
-                                {this.props.user.address ? this.props.user.address.city : ""}<br></br>
-                                {this.props.user.address ? this.props.user.address.street : ""}<br></br>
-                            </div>
-
-                            <div className="info-box">
-                                <span className="title-info">lavoro</span>
-                                <div className="line-info"></div>
-                                {this.props.user.company ? this.props.user.company.name : ""}<br></br>
-                                {this.props.user.company ? this.props.user.company.catchPhrase : ""}<br></br>
-                            </div>
+                            <UserInfo title='nome' info={this.props.user.name} stile='b' />
+                            <UserInfo title='username' info={this.props.user.username} stile='i' />
+                            <UserInfo title='contatti' info={[this.props.user.email,this.props.user.phone,this.props.user.website]} stile='arr' />
+                            <UserInfo title='abitazione' info={[this.props.user.address ? this.props.user.address.city : "",this.props.user.address ? this.props.user.address.street : ""]} stile='arr' />
+                            <UserInfo title='lavoro' info={[this.props.user.company ? this.props.user.company.name : "",this.props.user.company ? this.props.user.company.catchPhrase : ""]} stile='arr' />
                         </div>
                     </div>
                     <div className="user-right">
                         <div className="tabs-link">
                             <Tabs>
                                 Post
-                                <span><Posts idUser={query} /> </span>
+                                <span><Posts idUser={userId} /> </span>
                                 Album
-                                <span><Album idUser={query} /></span>
+                                <span><Album idUser={userId} /></span>
                             </Tabs>
                         </div>
                     </div>
