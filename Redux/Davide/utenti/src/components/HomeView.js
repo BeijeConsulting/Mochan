@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import User from "./User.js";
-import './HomeView.css';
+import './css/HomeView.css';
 import { connect } from 'react-redux';
 
 

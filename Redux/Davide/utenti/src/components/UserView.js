@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './UserView.css';
+import './css/UserView.css';
 import Album from "./Album.js";
 import Tabs from "./Tabs.js";
 import Posts from "./Posts.js";
