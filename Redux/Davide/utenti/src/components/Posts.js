@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Post from "./Post.js";
 import { connect } from 'react-redux'
+import reload from './img/reload.svg'
 
 class Posts extends Component {
     componentDidMount(){
@@ -23,7 +24,7 @@ class Posts extends Component {
         );
         return (
                 <div className="posts-box">
-                    {posts}
+                    {posts.length!==0 ? posts: <img className="loading" alt="loading" src={reload}></img>}
                 </div>
         );
     }

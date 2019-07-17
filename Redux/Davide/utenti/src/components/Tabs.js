@@ -3,17 +3,17 @@ import { connect } from 'react-redux'
 
 class Tabs extends Component {
     select = (i) => {
-        this.props.dispatch({
-          type:'CHANGE_TAB',
-          active: i
-        });
+      window.scrollTo(0, 0);
+      this.props.dispatch({
+        type:'CHANGE_TAB',
+        active: i
+      });
     }
     renderTabs = () => {
-        const hrefLink = '#'; 
         return React.Children.map(this.props.children, (item, i) => {
             if (i%2 === 0) {
               let active = this.props.active === i ? 'active' : '';
-              return <a href={hrefLink} onClick={()=>this.select(i)} className={`${active} tab`}>{item}</a>;
+              return <a href={"#"+item} onClick={()=>this.select(i)} className={`${active} tab`}>{item}</a>;
             }
         });
     }

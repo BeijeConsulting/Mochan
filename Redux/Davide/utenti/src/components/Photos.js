@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import './css/Photos.css';
+import reload from './img/reload.svg'
+
 
 
 class Photos extends Component {
@@ -22,7 +24,7 @@ class Photos extends Component {
         );
         return (
             <div className="container">
-                <div id="box-photos">{content}</div>
+                <div id="box-photos">{content.length!==0 ? content: <img alt="loading" className="loading" src={reload}></img>}</div>
             </div>
         );
     }

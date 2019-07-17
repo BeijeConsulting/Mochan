@@ -1,0 +1,13 @@
+Gioco Ping-Pong pro e contro con React:
+
+
+PRO:
+- migliore gestione dei componenti e dei loro stati
+- possibilità di aggiungere difficoltà a livelli con maggiore facilità
+- possibilità di creare più componenti uguali(più palline) con meno codice.
+- aggiunta di funzionalità future con più facilità
+- migliore leggibilità del codice
+
+CONTRO:
+- molti più file rispetto al singolo file di javascript puro
+

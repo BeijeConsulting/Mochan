@@ -14,13 +14,16 @@ const postReducer = (state = initialState,action) => {
         case 'LOAD_USERS':
             return {
                 ...state,
+                user: {},
+                active: 0,
+                posts:[],
                 users: action.data
             }
         case 'LOAD_USER':
             return {
                 ...state,
+                albums:[],
                 album: 0,
-                active: 0,
                 user: action.data
             }
         case 'CHANGE_TAB':
@@ -31,11 +34,13 @@ const postReducer = (state = initialState,action) => {
         case 'LOAD_ALBUMS':
             return {
                 ...state,
+                photos:[],
                 albums: action.data
             }
         case 'LOAD_ALBUM':
             return {
                 ...state,
+                photos:[],
                 album: action.id
             }
         case 'LOAD_PHOTOS':

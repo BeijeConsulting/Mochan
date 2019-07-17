@@ -3,6 +3,7 @@ import './css/Comments.css';
 import chat from './img/chat.svg'
 import { connect } from 'react-redux'
 
+
 class Comments extends Component {
     componentDidMount(){
         

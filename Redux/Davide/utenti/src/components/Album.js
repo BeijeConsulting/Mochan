@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Photos from "./Photos.js";
 import './css/Album.css';
 import { connect } from 'react-redux';
+import reload from './img/reload.svg'
+
 
 class Album extends Component {
     componentDidMount(){
@@ -19,6 +21,7 @@ class Album extends Component {
     }
 
     select = (i) => {
+        window.scrollTo(0, 0);
         this.props.dispatch({
             type : 'LOAD_ALBUM',
             id : i
@@ -26,6 +29,7 @@ class Album extends Component {
     }
 
     back(){
+        window.scrollTo(0, 0);
         this.props.dispatch({
             type : 'LOAD_ALBUM',
             id : 0
@@ -36,7 +40,7 @@ class Album extends Component {
         const albums = this.props.albums.map((album) =>
             <div key={album.id} className="album"><div className="album-title">{album.title}</div><div className="foto-link" onClick={()=>this.select(album.id)}>vedi foto</div></div>
         );
-        return this.props.album===0 ? albums : 
+        return this.props.album===0 ? (albums.length!==0 ? albums: <img className="loading" alt="loading" src={reload}></img>) : 
         
         <div><button className="back" onClick={()=>this.back()}>Torna agli album</button><Photos albumId={this.props.album} /></div>;
     }

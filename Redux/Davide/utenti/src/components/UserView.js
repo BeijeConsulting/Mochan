@@ -7,6 +7,7 @@ import Posts from "./Posts.js";
 
 class UserView extends Component {
     componentDidMount(){
+        window.scrollTo(0, 0);
         const str = window.location.search;
         const pieces =str.split("=");
         const query =pieces[pieces.length-1];

@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 
 class HomeView extends Component {
     componentDidMount(){
+        window.scrollTo(0, 0);
         var url = 'https://jsonplaceholder.typicode.com/users/';
         fetch(url)
         .then(response => response.json())
