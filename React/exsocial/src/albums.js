@@ -8,17 +8,14 @@ export default class Albums extends React.Component {
 
     async componentDidMount () {
         const jsonAlbums = await GetData('albums');
-        this.setState({usersList: jsonAlbums});
+        this.setState({albumsList: jsonAlbums}, () => console.log(this.state.albumsList));
+        
     }
 
     render () {
         return (
-        //     this.state.albumList.map(album => {
-        //         if(album.userId == this.props.key){
-        //         <p>{'ciao'}</p>
-        //     }
-        // })
-        this.state.albumsList.map(u => {<p>ciao</p>})
+            // this.state.albumsList.map(album => {if(album.userid == this.props.k) {<p>{album.title}</p>}})
+            this.state.albumsList.map(a => <p>{a[0].title}</p>)
         )
     }
 }
