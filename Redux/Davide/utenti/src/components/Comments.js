@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
 import './css/Comments.css';
-import chat from './img/chat.svg'
-import { connect } from 'react-redux'
+import chat from './img/chat.svg';
+import { connect } from 'react-redux';
+import { fetchData, hideComments } from '../actions';
 
 
 class Comments extends Component {
-    componentDidMount(){
-        
-    }
-
     back(){
-        this.props.dispatch({
-            type:'HIDE_COMMENTS',
-            id:this.props.postId
-        });
+        this.props.dispatch(hideComments(this.props.postId));
     }
 
     show(){
         var url = 'https://jsonplaceholder.typicode.com/comments?postId='+this.props.postId;
-        fetch(url)
-        .then(response => response.json())
-        .then(json => {
-                this.props.dispatch({
-                    type:'LOAD_COMMENTS',
-                    data : json,
-                    id : this.props.postId
-                });
-            }
-        )
+        this.props.dispatch(fetchData(url,'comments',this.props.postId));
     }
 
     renderComments(){
@@ -57,4 +42,8 @@ class Comments extends Component {
         );
     }
 }
-export default connect()(Comments);
+const mapStateToProps = state => ({
+    visible: state.fetch.posts.items
+});
+
+export default connect(mapStateToProps)(Comments);

@@ -2,51 +2,43 @@ import React, { Component } from 'react';
 import Photos from "./Photos.js";
 import './css/Album.css';
 import { connect } from 'react-redux';
-import reload from './img/reload.svg'
+import { fetchData, loadAlbum } from '../actions';
+import Loading from './Loading.js';
 
 
 class Album extends Component {
     componentDidMount(){
         var id =  this.props.idUser;
         var url = 'https://jsonplaceholder.typicode.com/albums?userId='+id;
-        fetch(url)
-        .then(response => response.json())
-        .then(json => {
-                this.props.dispatch({
-                    type : 'LOAD_ALBUMS',
-                    data : json
-                });
-            }
-        )
+        this.props.dispatch(fetchData(url,'albums'));
     }
 
     select = (i) => {
         window.scrollTo(0, 0);
-        this.props.dispatch({
-            type : 'LOAD_ALBUM',
-            id : i
-        });
+        this.props.dispatch(loadAlbum(i));
     }
 
     back(){
         window.scrollTo(0, 0);
-        this.props.dispatch({
-            type : 'LOAD_ALBUM',
-            id : 0
-        });
+        this.props.dispatch(loadAlbum(0));
     }
 
     renderPhoto(){
-        const albums = this.props.albums.map((album) =>
+        const { error, loading, albums, album } = this.props;
+        if (error) {
+            return <div>Error! {error.message}</div>;
+        }
+        if (loading) {
+            return <Loading />;
+        }
+        const content = albums.map((album) =>
             <div key={album.id} className="album"><div className="album-title">{album.title}</div><div className="foto-link" onClick={()=>this.select(album.id)}>vedi foto</div></div>
         );
-        return this.props.album===0 ? (albums.length!==0 ? albums: <img className="loading" alt="loading" src={reload}></img>) : 
-        
-        <div><button className="back" onClick={()=>this.back()}>Torna agli album</button><Photos albumId={this.props.album} /></div>;
+        console.log(album)
+        return album===0 ? content : <div><button className="back" onClick={()=>this.back()}>Torna agli album</button><Photos albumId={this.props.album} /></div>;
     }
 
     render() {
-        
         return (
                 <div className="albums-box">
                     {this.renderPhoto()}
@@ -54,10 +46,11 @@ class Album extends Component {
         );
     }
 }
-const mapStateToProps = (state) => {
-    return {
-        album:state.album,
-        albums:state.albums
-    }
-}
+const mapStateToProps = state => ({
+    album: state.fetch.album,
+    albums: state.fetch.albums.items,
+    loading: state.fetch.albums.loading,
+    error: state.fetch.albums.error
+});
+
 export default connect(mapStateToProps)(Album);

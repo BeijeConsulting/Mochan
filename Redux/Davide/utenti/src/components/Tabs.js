@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { changeTab } from '../actions';
+
 
 class Tabs extends Component {
     select = (i) => {
       window.scrollTo(0, 0);
-      this.props.dispatch({
-        type:'CHANGE_TAB',
-        active: i
-      });
+      this.props.dispatch(changeTab(i));
     }
     renderTabs = () => {
         return React.Children.map(this.props.children, (item, i) => {
@@ -40,7 +39,7 @@ class Tabs extends Component {
   
 const mapStateToProps = (state) => {
     return {
-        active:state.active
+        active:state.fetch.active
     }
 }
 export default connect(mapStateToProps)(Tabs);
