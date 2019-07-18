@@ -4,16 +4,18 @@ import {FetcTech} from "../Actions/Actions";
 
 class UnTecCard extends Component {
     componentDidMount() {
-        fetch(this.props.url)
-            .then(response => response.json())
-            .then(json => this.props.dispatch(FetcTech(json)));
+        let a = []
+        for (let i = 0; i = this.props.url.length; i++) {
+            fetch(this.props.url)
+                .then(response => response.json())
+                .then(json => a.concat(json));
+        }
+        console.log(a)
     }
-
     render() {
 
         return(
             <div>
-                {console.log(this.props.url)}
                 <h4>Unique Technology</h4>
                 <p>{this.props.tech.name}</p>
 
