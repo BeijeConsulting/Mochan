@@ -1,14 +1,18 @@
 .user-box {
     display: flex;
     justify-content: center;
+    width: 95%;
+    margin: auto;
 }
 .user-left {
-    width: 25%;
-    margin-top: 60px;
+    background-color: #0d4156;
+    padding: 30px;
+    color: #f1f1f1;
+    margin-right: 10px;
 }
 .user-right {
-    width: 75%;
     margin-top: 20px;
+    width: 75%;
 }
 a.tab-link {
     color: black;

@@ -34,15 +34,14 @@ class Album extends Component {
         const content = albums.map((album) =>
             <div key={album.id} className="album"><div className="album-title">{album.title}</div><div className="foto-link" onClick={()=>this.select(album.id)}>vedi foto</div></div>
         );
-        console.log(album)
         return album===0 ? content : <div><button className="back" onClick={()=>this.back()}>Torna agli album</button><Photos albumId={this.props.album} /></div>;
     }
 
     render() {
         return (
-                <div className="albums-box">
-                    {this.renderPhoto()}
-                </div>
+            <div className="albums-box">
+                {this.renderPhoto()}
+            </div>
         );
     }
 }
