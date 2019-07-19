@@ -59,71 +59,79 @@ export const auth = (email, password, alreadySigned) => {
 
         let url = ''
         if (alreadySigned) {
-          let nonceKey = null
+          let nonceKey = null;
 
-          axios.get('http://52.19.68.75/api/get_nonce/?controller=user&method=register')
-          .then(res => {
-              console.log('nonceKey ', res.data.nonce);
-              nonceKey = res.data.nonce
-              dispatch(nonceFetch(res.data.nonce))
-          })
-          .then(function(){
-            url = 'http://52.19.68.75/api/user/register/?username=' + authData.email + '&email=' + authData.email + '&display_name=' + authData.email + '&notify=both&user_pass=' + authData.password + '&insecure=cool&nonce=' + nonceKey;
-            console.log(url)
-            axios.get(url, authData)
-                .then(res => {
-                    console.log('reg res ',res);
-                    if (res && res.data.status) {
-                       console.log("Registration OK! proceed with auto login...");
-                       console.log(res.data.cookie);
+          window.alert('OK REGISTRAZIONE');
+          window.location.reload();
 
-                       //login with the same credentials
-                       url = 'http://52.19.68.75/api/user/generate_auth_cookie/?username=' + authData.email + '&password=' + authData.password + '&insecure=cool';
-                       console.log(url)
-                       axios.get(url, authData)
-                           .then(res => {
-                               console.log(res);
-                               if (res.data.status) {
-                                  console.log("OK");
-                                  console.log(res.data.cookie);
-                                  console.log(res.data.cookie_name);
-                                  document.cookie = res.data.cookie_name + '=' + res.data.cookie;
-                                  dispatch(authSuccess(res.idToken, res.localId));
-                                  window.location.reload();
-                               } else {
-                                  console.log("KO");
-                                  //TODO: add an error message in popup
-                               }
-                           })
-
-                    } else {
-                       console.log("KO");
-                       //TODO: add an error message in popup
-                    }
-                 })
-                 // .catch(res => {
-                 //   console.log('catch reg res ',res);
-                 // })
-          })
+          // IVO : NON CANCELLARE
+          // axios.get('http://52.19.68.75/api/get_nonce/?controller=user&method=register')
+          // .then(res => {
+          //     console.log('nonceKey ', res.data.nonce);
+          //     nonceKey = res.data.nonce
+          //     dispatch(nonceFetch(res.data.nonce))
+          // })
+          // .then(function(){
+          //   url = 'http://52.19.68.75/api/user/register/?username=' + authData.email + '&email=' + authData.email + '&display_name=' + authData.email + '&notify=both&user_pass=' + authData.password + '&insecure=cool&nonce=' + nonceKey;
+          //   console.log(url)
+          //   axios.get(url, authData)
+          //       .then(res => {
+          //           console.log('reg res ',res);
+          //           if (res && res.data.status) {
+          //              console.log("Registration OK! proceed with auto login...");
+          //              console.log(res.data.cookie);
+          //
+          //              //login with the same credentials
+          //              url = 'http://52.19.68.75/api/user/generate_auth_cookie/?username=' + authData.email + '&password=' + authData.password + '&insecure=cool';
+          //              console.log(url)
+          //              axios.get(url, authData)
+          //                  .then(res => {
+          //                      console.log(res);
+          //                      if (res.data.status) {
+          //                         console.log("OK");
+          //                         console.log(res.data.cookie);
+          //                         console.log(res.data.cookie_name);
+          //                         document.cookie = res.data.cookie_name + '=' + res.data.cookie;
+          //                         dispatch(authSuccess(res.idToken, res.localId));
+          //                         window.location.reload();
+          //                      } else {
+          //                         console.log("KO");
+          //                         //TODO: add an error message in popup
+          //                      }
+          //                  })
+          //
+          //           } else {
+          //              console.log("KO");
+          //              //TODO: add an error message in popup
+          //           }
+          //        })
+          //        // .catch(res => {
+          //        //   console.log('catch reg res ',res);
+          //        // })
+          // })
 
         } else {
-          url = 'http://52.19.68.75/api/user/generate_auth_cookie/?username=' + authData.email + '&password=' + authData.password + '&insecure=cool';
-          console.log(url)
-          axios.get(url, authData)
-              .then(res => {
-                  console.log('log res ',res);
-                  if (res.data.status) {
-                     console.log("OK");
-                     console.log(res.data.cookie);
-                     console.log(res.data.cookie_name);
-                     document.cookie = res.data.cookie_name + '=' + res.data.cookie;
-                     dispatch(authSuccess(res.idToken, res.localId));
-                     window.location.reload();
-                  } else {
-                     console.log("KO");
-                     //TODO: add an error message in popup
-                  }
-              })
+          window.alert('OK LOGIN');
+          window.location.reload();
+
+          // IVO : NON CANCELLARE
+          // url = 'http://52.19.68.75/api/user/generate_auth_cookie/?username=' + authData.email + '&password=' + authData.password + '&insecure=cool';
+          // console.log(url)
+          // axios.get(url, authData)
+          //     .then(res => {
+          //         console.log('log res ',res);
+          //         if (res.data.status) {
+          //            console.log("OK");
+          //            console.log(res.data.cookie);
+          //            console.log(res.data.cookie_name);
+          //            document.cookie = res.data.cookie_name + '=' + res.data.cookie;
+          //            dispatch(authSuccess(res.idToken, res.localId));
+          //            window.location.reload();
+          //         } else {
+          //            console.log("KO");
+          //            //TODO: add an error message in popup
+          //         }
+          //     })
         }
 
     }
