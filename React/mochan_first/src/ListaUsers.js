@@ -23,10 +23,9 @@ export default class Lista extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         const listauser = this.state.dato ? this.state.dato.map((user) => <Users key={user.id} value = {user.name} />) : ""
-
             return (
+                {console.log(this.state)}
                 <div className="users_main">
                     <div className="users__Container">
                         <div className="lista"> {listauser} </div>
