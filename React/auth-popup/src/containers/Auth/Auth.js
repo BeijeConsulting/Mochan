@@ -10,7 +10,6 @@ import * as actions from '../../store/actions/index';
 import { updObj, checkValidity } from '../../shared/utility';
 import x from '../../assets/images/X.png';
 
-
 import fbLogo from '../../assets/images/fb.png';
 import labels from '../../assets/labels.json';
 

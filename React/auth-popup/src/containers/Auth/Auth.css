@@ -1,30 +1,3 @@
-/* .Background {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-} */
-/* body {
-     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-} */
-
 .Auth {
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.85);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.85);
@@ -42,7 +15,6 @@
     z-index: 200;
 }
 
-
 .TextCol {
     color: #3EFFEC;
 }
@@ -51,44 +23,31 @@
     color: #888888
 }
 
-
 .Welcome {
     font-size: 26px;
     font-weight: bold;
-    font-family: 'Literata', sans-serif;
 }
 
 .LoginToAccess {
     font-size: 15px;
-    font-family: 'Literata', sans-serif;
     color: rgb(102, 102, 102);
-
     margin-top: 5px;
     margin-bottom: 40px;
 }
 
 .TenPercent {
     font-size: 15px;
-    font-family: 'Literata', sans-serif;
     color: rgb(0, 0, 0);
-
     margin-top: 40px;
     margin-bottom: 20px;
     font-weight: bolder;
-    display: inline;
 }
 
 .NeutralText {
     font-size: 13px;
-    font-family: 'Literata', sans-serif;
     text-align: center;
-    /* float: left; */
     display: inline-block;
     color: #E1E2E4;
-    /* margin-top: 1em; */
-    /* display: 'flex';
-    align-items: 'center';
-    justify-content: 'center'; */
     margin-top: 15px;
 
 }
@@ -110,7 +69,6 @@
     vertical-align: middle;
     cursor: pointer;
     color: #2e332f;
-    font-family: 'Literata', sans-serif;
     font-weight: 900;
     border: 1px #BBBBBB solid;
     text-align: center;
@@ -135,7 +93,6 @@ img {
 .Newsletter {
     font-size: 9px;
     color: #626262;
-    /* text-align: left; */
     display: inline-block;
     margin-left: 1%;
     margin-right: 5%;
@@ -146,10 +103,8 @@ img {
 .YesIWould {
     position: absolute;
     left: 20px;
-
     text-align: left;
     margin-left: 40px;
-    /* margin-right: 7%; */
     margin-top: 0px;
 }
 
@@ -159,25 +114,19 @@ img {
     top: 73.5%;
     text-align: left;
     margin-left: 0%;
-    /* margin-left: 40px; */
-    /* margin-right: 7%; */
 }
 
 .ResetPass {
     color: rgb(113, 114, 114);
     font-weight: bolder;
     font-size: 12px;
-    font-family: 'Literata', sans-serif;
     padding: 0;
     border: none;
     background: none;
-
     text-decoration: underline;
     float: right;
-    /*width: 120px;*/
     margin-right: 5%;
     cursor: pointer;
-    /* display: inline-block; */
 }
 
 .PrivacyPolicy {
@@ -200,47 +149,15 @@ img {
 }
 
 .IncorrectPassButton {
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    display: inline-block;
-    width: 85%;
-    text-align: center; */
-
-    /* width: 90%; */
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-sizing: none;
-    text-align: center;
-    margin: 0; */
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
     color: rgb(227, 253, 251);
     background-color: #2e332f;
     cursor: pointer;
-    /* height: 2vh; Magic here */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Literata', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 900;
 }
 
@@ -249,47 +166,15 @@ img {
 }
 
 .IncorrectPassButtonLoginStyle {
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    display: inline-block;
-    width: 85%;
-    text-align: center; */
-
-    /* width: 90%; */
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-sizing: none;
-    text-align: center;
-    margin: 0; */
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
     color: rgb(227, 253, 251);
     background-color: #2e332f;
     cursor: pointer;
-    /* height: 2vh; Magic here */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Literata', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 900;
     margin-top: 6px;
 }
@@ -298,25 +183,13 @@ img {
     background-color: #425c48;
 }
 
-/* @media (max-width: 1000px){
-    .Auth {
-        width: 70%;
-        height: 70%;
-        position: absolute;
-        top: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-} */
 
 .Auth input[type=checkbox] {
     position: absolute;
       cursor: pointer;
-      /* margin: 10px; */
       margin-top: 10px;
       position: absolute;
     left: 20px;
-      /* margin-left: -5px; */
 }
 
 .Auth input[type=checkbox]:before {
@@ -327,7 +200,6 @@ img {
     top: 0;
     left: 0;
     border: 2px solid #313437 ;
-    /* border-radius: 3px; */
     background-color: #313437 ;
 }
 
@@ -366,9 +238,7 @@ img {
 
     .NeutralText {
         font-size: 13px;
-        font-family: 'Literata', sans-serif;
-        /* float: left; */
-        display: inline-block;
+            display: inline-block;
         color: rgb(124, 124, 124);
         padding-top: 5px;
     }
@@ -380,12 +250,7 @@ img {
     .PrivacyPolicyText{
         position: relative;
         left: 0;
-        /* top: 41%; */
-        /* text-align: center; */
-        /* margin-left: 40px; */
-        /* margin-right: 15%; */
         margin-top: 15%;
-        /* margin-left: -120px;  */
     }
 
     .YesIWould {
