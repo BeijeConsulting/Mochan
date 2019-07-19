@@ -7,13 +7,11 @@ import Button from '../../components/UI/Button/Button';
 import classes from './Auth.css';
 import * as actions from '../../store/actions/index';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
-// import axios from '../../axios-users';
 import axios from 'axios';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import { updObj, checkValidity } from '../../shared/utility';
 
 import fbLogo from '../../assets/images/fb.png';
-import x from '../../assets/images/X.png';
 import labels from '../../assets/labels.json';
 
 
@@ -161,9 +159,6 @@ class Auth extends Component {
         this.setState({
             correctPassword: true
         })
-        // this.setState({
-        //     showSignButton: false
-        // })
     }
 
     resetActiveHandler = () => {
@@ -173,15 +168,6 @@ class Auth extends Component {
 
         this.props.onResetActive(this.state.resetActive)
     }
-
-    // exitHandler = () => {
-    //     this.setState({
-    //         exitActive: true
-    //     })
-
-    //     this.props.onExitActive(this.state.exitActive)
-    // }
-
     checkboxHandler = () => {
         this.setState(prevState => {
             return {checkboxActive: !prevState.checkboxActive};
@@ -199,7 +185,6 @@ class Auth extends Component {
             correctPassword: false
         })
     }
-
 
     render () {
         const formELementsArray = [];
@@ -227,7 +212,7 @@ class Auth extends Component {
         form = (
         <div>
         {(formELementsArray.slice()).map(formElement => (
-            <div className={classes.InputWidth}>
+            <div key={formElement.id} className={classes.InputWidth}>
             <Input  key={formElement.id}
                     elementType={formElement.config.elementType}
                     elementConfig={formElement.config.elementConfig}
@@ -238,8 +223,7 @@ class Auth extends Component {
                     changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
             </div>
         ))}
-        {/* // eslint-disable-next-line no-unexpected-multiline */}
-        <div className={classes.InputWidth}>
+        <div key={this.state.controlsTwo.id} className={classes.InputWidth}>
             <Input  key={this.state.controlsTwo.id}
                     elementType={this.state.controlsTwo.password.elementType}
                     elementConfig={this.state.controlsTwo.password.elementConfig}
@@ -252,44 +236,9 @@ class Auth extends Component {
         </div>
         )
     } else form = <Spinner />
-
-        // if (!this.props.loading){
-        //     formTwo = (formELementsArray.slice()).map(formElement => (
-        //         <Input  key={formElement.id}elementType={formElement.config.elementType}
-        //                 elementConfig={formElement.config.elementConfig}
-        //                 value={formElement.config.value}
-        //                 invalid={!formElement.config.valid}
-        //                 shouldValidate={formElement.config.validation}
-        //                 touched={formElement.config.touched}
-        //                 changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
-        //     ))} else form = <Spinner />
-
-        // SET PLACEHOLDER
-        // this.state.controls.email.elementConfig.placeholder = labels[this.state.language].placeholderEmail;
-        // this.state.controls.password.elementConfig.placeholder = labels[this.state.language].placeholderPassword;
-
-        // this.setState({
-        //     controls: {
-        //         email: {
-        //             elementConfig: {
-        //                 placeholder: labels[this.state.language].placeholderEmail
-        //             }
-        //         }
-        //     },
-        //     controlsTwo: {
-        //         password: {
-        //             elementConfig: {
-        //                 placeholder: labels[this.state.language].placeholderPassword
-        //             }
-        //         }
-        //     }
-        // })
-
-
-            // 2-step registration
             if (!this.props.loading){
                 formRegistration1 = (formELementsArray.slice(0,1)).map(formElement => (
-                    <div className={classes.InputWidth}>
+                    <div key={formElement.id} className={classes.InputWidth}>
                     <Input  key={formElement.id} elementType={formElement.config.elementType}
                             elementConfig={formElement.config.elementConfig}
                             value={formElement.config.value}
@@ -302,7 +251,7 @@ class Auth extends Component {
 
             if (!this.props.loading){
                 formRegistration2 =
-                <div className={classes.InputWidth}>
+                <div key={this.state.controlsTwo.id} className={classes.InputWidth}>
                 <Input  key={this.state.controlsTwo.id}
                 elementType={this.state.controlsTwo.password.elementType}
                         elementConfig={this.state.controlsTwo.password.elementConfig}
@@ -313,9 +262,6 @@ class Auth extends Component {
                         changed={(event) => this.inputChangedHandlerTwo(event, this.state.controlsTwo.id)}/>
                         </div>
             }
-             // 2-step registration
-
-
         let errorMessage = null;
 
         if (this.props.error) {
@@ -346,9 +292,6 @@ class Auth extends Component {
         return (
             <div className={classes.Background}>
                 <div className={classes.Auth}>
-                    {/* <Button buttonType="X" clickd={this.exitHandler}>
-                        {<img src={x} alt="LOGO"/>}
-                    </Button> */}
                     <div className={classes.Welcome}>
                         <br/>
                         {this.state.newSign ? (this.state.currentStep === 1 ? labels[this.state.language].createAccount : labels[this.state.language].welcomeMessage) : labels[this.state.language].welcomeMessage}
@@ -356,7 +299,7 @@ class Auth extends Component {
                     <div className={classes.LoginToAccess}>
                         {this.state.newSign ? (this.state.currentStep === 1 ?
                                                     <div>
-                                                        {labels[this.state.language].getDiscountPre}&nbsp;<text className={classes.TenPercent}>SCONTO</text>&nbsp;{labels[this.state.language].getDiscountPost}
+                                                        {labels[this.state.language].getDiscountPre}&nbsp;<span className={classes.TenPercent}>SCONTO</span>&nbsp;{labels[this.state.language].getDiscountPost}
                                                     </div> : labels[this.state.language].completeSignup) : labels[this.state.language].loginToAccess}
                     </div>
                     {!this.state.correctEmail && this.state.currentStep === 1 && this.state.newSign ?
@@ -371,7 +314,6 @@ class Auth extends Component {
                         <div>
                     {authRedirect}
                     {errorMessage}
-                    {/* <br/> */}
                     </div>}
 
                     {!this.state.correctPassword && this.state.currentStep === 1 && !this.state.newSign && !this.props.loading ?
@@ -383,12 +325,10 @@ class Auth extends Component {
                         <div>
                     {authRedirect}
                     {errorMessage}
-                    {/* <br/> */}
                     </div>}
                     <form onSubmit={this.loginHandler} onKeyPress={e => {if (e.key === 'Enter') e.preventDefault();}}>
                         {this.state.newSign && this.state.currentStep === 1 ?
                             formRegistration1 : this.state.newSign && this.state.currentStep === 2 ? formRegistration2 : form }
-                        {/* <div onClick={() => this.setState({retrievePass: false})}> */}
                         <div className={classes.ResetPass} onClick={this.resetActiveHandler}>
                             {!this.state.newSign && !this.props.loading ? labels[this.state.language].resetPassword : null }
                         </div>

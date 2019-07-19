@@ -27,6 +27,14 @@ class App extends Component {
 
   componentDidMount(){
     this.props.onAutoLogInAttempt();
+    let button = document.getElementById('loginLinkEl');
+    console.log('button : ', button);
+    // console.log('popupActive : ', this.state.popupActive);
+
+    if (button) {
+      button = <Button key="login" buttonType="MainLogin" clickd={this.htmlButtonHandler}>Login</Button>;
+      ReactDOM.render(button, document.getElementById('loginLinkEl'));
+    }
   }
 
 
@@ -55,16 +63,6 @@ class App extends Component {
     //   </Switch>
     // )
     console.log('this.props.exitActive : ', this.props.exitActive);
-
-
-    let button = document.getElementById('loginLinkEl');
-    console.log('button : ', button);
-    // console.log('popupActive : ', this.state.popupActive);
-
-    if (button) {
-      button = <Button key="login" buttonType="MainLogin" clickd={this.htmlButtonHandler}>Login</Button>;
-      ReactDOM.render(button, document.getElementById('loginLinkEl'));
-    }
 
 
     if (this.state.popupActive) {
