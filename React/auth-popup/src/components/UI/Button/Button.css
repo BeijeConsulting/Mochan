@@ -1,0 +1,220 @@
+.Button {
+    border: none;
+    color: goldenrod;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* margin: 10px;  */
+    font-weight: thin;
+    font-family: 'Literata', sans-serif;
+    text-align: center;
+    width: 90%;
+}
+
+.MainLogin {
+    background: none;
+    text-decoration: none;
+    color: #000000;
+    width: auto;
+    padding: 0;
+    position: relative;
+    top: 14px;
+}
+
+.X {
+    background: none;
+    text-decoration: underline;
+    position: absolute;
+    top: 0%;
+    left: 84%;
+    float: right;
+    width: 5px;
+    height: 5px;
+    margin: 2%;
+    margin-bottom: 0;
+}
+
+
+.Button:first-of-type {
+    /* margin-left: 10px; */
+    /* padding-left: 10px; */
+    /* border-radius: 5px 5px 5px 5px; */
+    /* border-top: #F5FFFE 1px solid; */
+}
+
+.Success {
+    color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+
+.Success:hover {
+    background-color: #425c48;
+}
+
+.SuccessContinue {
+    color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    /* margin: 5px; */
+    margin-top: 0;
+}
+
+
+.SuccessContinue:hover {
+    background-color: #425c48;
+}
+
+.SuccessContinue:disabled {
+    background-color: #2e332f;
+}
+
+.SuccessFB {
+    color: #313437;
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px #BBBBBB solid;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.SuccessFB:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.CompleteSignup {
+    color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.CompleteSignup:hover {
+    background-color: #425c48;
+}
+
+.Danger {
+    color: #e4b100;
+    font-weight: bolder;
+    font-size: 13px;
+   font-family: 'Literata', sans-serif;
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: 4px;
+    text-align: left;
+
+    text-decoration: underline;
+    /* float: right; */
+    width: 21%;
+    display: inline-block;
+
+    margin-top: 15px;
+}
+
+.Danger:hover {
+    color: #e0ca7a;
+}
+
+.LoginHere {
+    color: #e4b100;
+    font-weight: bolder;
+    font-size: 13px;
+   font-family: 'Literata', sans-serif;
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: -18px;
+    margin-right: 0;
+
+    text-decoration: underline;
+    /* float: right; */
+    width: 120px;
+    display: inline-block;
+
+    margin-top: 15px;
+}
+
+.LoginHere:hover {
+    color: #ffffff;
+}
+
+.ResetPass {
+    color: rgb(113, 114, 114);
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: 'Literata', sans-serif;
+    padding: 0;
+    border: none;
+    background: none;
+
+    text-decoration: underline;
+    float: right;
+    width: 120px;
+    margin: 2%;
+    /* display: inline-block; */
+}
+
+.KentuckyStepNext {
+    color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.KentuckyStepBack {
+    color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+/* .PrivacyPolicy {
+    color: #626262;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    text-decoration: underline;
+    margin-left: 1px;
+} */
+
+
+.Button:disabled {
+    color: rgb(102, 102, 102);
+    cursor: not-allowed;
+    background-color: rgb(197, 197, 197);
+}
+
+@media (max-width: 800px){
+    .Danger {
+      margin-top: 20px;
+    }
+
+    .LoginHere {
+        margin-top: 20px;
+      }
+}
