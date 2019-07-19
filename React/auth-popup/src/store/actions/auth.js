@@ -1,6 +1,4 @@
-import axios from 'axios'
-
-// import axios from '../../axios-users'
+// import axios from 'axios'
 import * as actionTypes from './actionTypes'
 
 export const authBegin = () => {
@@ -51,15 +49,15 @@ export const checkAuthTimeout = (expirationTime) => {
 export const auth = (email, password, alreadySigned) => {
     return dispatch => {
         dispatch(authBegin());
-        const authData = {
-            email: email,
-            password: password,
-            returnSecureToken: true
-        };
+        // const authData = {
+        //     email: email,
+        //     password: password,
+        //     returnSecureToken: true
+        // };
 
-        let url = ''
+        // let url = ''
         if (alreadySigned) {
-          let nonceKey = null;
+        //   let nonceKey = null;
 
           window.alert('OK REGISTRAZIONE');
           window.location.reload();

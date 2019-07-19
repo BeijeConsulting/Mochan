@@ -1,9 +1,3 @@
-
-// export const ADD_SELL_OFFER_BEGIN = 'ADD_SELL_OFFER_BEGIN';
-// export const ADD_SELL_OFFER_SUCCESS = 'ADD_SELL_OFFER_SUCCESS';
-// export const ADD_SELL_OFFER_FAILED = 'ADD_SELL_OFFER_FAILED';
-// export const ADD_SELL_OFFER_INIT = 'ADD_SELL_OFFER_INIT';
-
 export const AUTH_BEGIN = 'AUTH_BEGIN';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAILED = 'AUTH_FAILED';

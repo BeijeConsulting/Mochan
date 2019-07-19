@@ -9,7 +9,3 @@ export {
     resetActiveChange,
     exitActiveChange
    } from './auth';
-
-export {
-    currentStepNext
-    } from './steps'
