@@ -1,29 +1,3 @@
-/* .Background {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-} */
-/* body {
-     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-} */
 
 .Auth {
     margin: 20px auto;
@@ -87,13 +61,8 @@ box-shadow: 10px 10px 30px 17px rgba(0,0,0,0.85);
     font-size: 13px;
     font-family: 'Literata', sans-serif;
     text-align: center;
-    /* float: left; */
     display: inline-block;
     color: #E1E2E4;
-    /* margin-top: 1em; */
-    /* display: 'flex';
-    align-items: 'center';
-    justify-content: 'center'; */
     margin-top: 15px;
 
 }
@@ -115,8 +84,6 @@ box-shadow: 10px 10px 30px 17px rgba(0,0,0,0.85);
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-
-    /* width: 200px; */
     cursor: pointer;
 
         color: #2e332f;
@@ -162,7 +129,6 @@ img {
 
     text-align: left;
     margin-left: 40px;
-    /* margin-right: 7%; */
     margin-top: 0px;
 }
 
@@ -172,8 +138,6 @@ img {
     top: 73.5%;
     text-align: left;
     margin-left: 0%;
-    /* margin-left: 40px; */
-    /* margin-right: 7%; */
 }
 
 .ResetPass {
@@ -187,10 +151,8 @@ img {
 
     text-decoration: underline;
     float: right;
-    /*width: 120px;*/
     margin-right: 5%;
     cursor: pointer;
-    /* display: inline-block; */
 }
 
 .PrivacyPolicy {
@@ -213,43 +175,12 @@ img {
 }
 
 .IncorrectPassButton {
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    display: inline-block;
-    width: 85%;
-    text-align: center; */
-
-    /* width: 90%; */
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-sizing: none;
-    text-align: center;
-    margin: 0; */
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
     color: rgb(227, 253, 251);
     background-color: #2e332f;
     cursor: pointer;
-    /* height: 2vh; Magic here */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,36 +193,6 @@ img {
 }
 
 .IncorrectPassButtonLoginStyle {
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    display: inline-block;
-    width: 85%;
-    text-align: center; */
-
-    /* width: 90%; */
-    /* color: rgb(227, 253, 251);
-    font-family: 'Literata', sans-serif;
-    font-weight: 900;
-    border: 1px;
-    background-color: #2e332f;
-    margin-bottom: 0px;
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-sizing: none;
-    text-align: center;
-    margin: 0; */
     margin-left: 5%;
     margin-right: 5%;
     padding: 10px;
@@ -310,17 +211,6 @@ img {
 .IncorrectPassButtonLoginStyle:hover {
     background-color: #425c48;
 }
-
-/* @media (max-width: 1000px){
-    .Auth {
-        width: 70%;
-        height: 70%;
-        position: absolute;
-        top: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-} */
 
 .Auth input[type=checkbox] {
     position: absolute;

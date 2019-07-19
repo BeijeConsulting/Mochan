@@ -17,12 +17,13 @@ const input = (props) => {
                                   value={props.value} 
                                   onChange={props.changed}/>;
             break;
-        case ('textarea'):
+        /*case ('textarea'):
             inputElement = <textarea className={inputClasses} 
                                     {...props.elementConfig} 
                                     value={props.value} 
                                     onChange={props.changed}/>;
-            break;
+            break;*/
+
         case ('select'):
             inputElement = (
                            <select className={classes.InputElement} 
