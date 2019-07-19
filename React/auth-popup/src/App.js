@@ -66,11 +66,10 @@ class App extends Component {
       ReactDOM.render(button, document.getElementById('loginLinkEl'));
     }
 
-
     if (this.state.popupActive) {
       routes = (
       <Switch>
-        <Route path="/" component={asyncAuth} />
+        <Route path="/" component={asyncAuth}/>
         <Redirect to="/" />
       </Switch>
       )
