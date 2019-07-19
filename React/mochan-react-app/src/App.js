@@ -3,7 +3,7 @@ import Header from './Header';
 import Users from './Users';
 /*import logo from './logo.svg';*/
 import './App.css';
-import Photos from './Photos';
+/*import Photos from './Photos';*/
 
 class App extends Component {
   render() {
@@ -14,9 +14,6 @@ class App extends Component {
           </div>
           <div className="Users">
           <Users/>
-          </div>
-          <div>
-          <Photos/>
           </div>
       </div>
     );

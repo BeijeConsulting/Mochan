@@ -14,18 +14,15 @@ const routing = (
   <Router>
     <div className="menu">
       <ul>
-        <li>
-          <NavLink to="/"></NavLink>
-        </li>
+        
         <li>
           <NavLink to="/Users">Users</NavLink>
         </li>
         <li>
           <NavLink to="/albums">Albums</NavLink>
+        
         </li>
-        <li>
-          <NavLink to="/Photos">Photos</NavLink>
-        </li>
+        
       </ul>
       <Route path="/" component={App} />
       <Route path="/albums" component={Albums} /> 

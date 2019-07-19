@@ -1,7 +1,8 @@
 import React from "react";
+import './album.css';
 export default class Albums extends React.Component {
   state = {
-   albums: []
+   albums: [],
  }
  
  componentDidMount() {
@@ -10,31 +11,24 @@ export default class Albums extends React.Component {
     .then((data) => {
       this.setState({ albums: data })
     })
- 
-    
-
   }
-   render() {
+  
+  render() {
+  
+    return (
 
-      return (
-
-        <div>
-            <h1>Albums</h1>
-            {this.state.albums.map((album) => (
-              <div>
-                
-                    <li>Album{album.userId}:{album.title}</li>
-                
-              </div>
-            ))}
-        </div>
+      <div>
+        <h1 onClick={this.userAlbum}>Albums</h1>
+        {this.state.albums.map((album) => (
+          <div>
+            
+            Album{album.userId}:{album.title}
+            
+          </div>
+        ))}
+      </div>
 
 
-      );
-   }
-   
+    );
+  } 
 }
-
-
-
-
