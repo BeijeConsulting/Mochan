@@ -1,0 +1,406 @@
+/* .Background {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+} */
+/* body {
+     width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+} */
+
+.Auth {
+    margin: 20px auto;
+    margin-bottom: 100px;
+    width: 35%;
+    text-align: center;
+
+    -webkit-box-shadow: 10px 10px 30px 17px rgba(0,0,0,0.85);
+-moz-box-shadow: 10px 10px 30px 17px rgba(0,0,0,0.85);
+box-shadow: 10px 10px 30px 17px rgba(0,0,0,0.85);
+    /* border: 1px solid #A78F7E; */
+    /* padding: -3px; */
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+
+    position: absolute;
+     left: 50%;
+      top: 40%;
+    transform: translate(-50%, -50%);
+
+    z-index: 200;
+}
+
+
+.TextCol {
+    color: #3EFFEC;
+}
+
+.InputStyle {
+    color: #888888
+}
+
+
+.Welcome {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Literata', sans-serif;
+}
+
+.LoginToAccess {
+    font-size: 15px;
+    font-family: 'Literata', sans-serif;
+    color: rgb(102, 102, 102);
+
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.TenPercent {
+    font-size: 15px;
+    font-family: 'Literata', sans-serif;
+    color: rgb(0, 0, 0);
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    display: inline;
+}
+
+.NeutralText {
+    font-size: 13px;
+    font-family: 'Literata', sans-serif;
+    text-align: center;
+    /* float: left; */
+    display: inline-block;
+    color: #E1E2E4;
+    /* margin-top: 1em; */
+    /* display: 'flex';
+    align-items: 'center';
+    justify-content: 'center'; */
+    margin-top: 15px;
+
+}
+
+.BottomPanel {
+
+    background-color: #4b44ad;
+    margin: -0.1%;
+}
+
+.RemoveFooter {
+    background-color: #FFFFFF;
+    padding: 0;
+}
+
+
+.FB {
+    padding-top: 7px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+    /* width: 200px; */
+    cursor: pointer;
+
+        color: #2e332f;
+        font-family: 'Literata', sans-serif;
+        font-weight: 900;
+        border: 1px #BBBBBB solid;
+        background-color: #FFFFFF;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 90%;
+}
+
+.FB:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+img {
+    vertical-align: middle;
+    max-height: 25px;
+    max-width: 160px;
+}
+
+.Newsletter {
+    font-size: 9px;
+    color: #626262;
+    /* text-align: left; */
+    display: inline-block;
+    margin-left: 1%;
+    margin-right: 5%;
+    height: 100%;
+    text-align: left;
+}
+
+
+
+.NewsletterCheckbox:hover {
+
+}
+
+.YesIWould {
+    position: absolute;
+    left: 20px;
+
+    text-align: left;
+    margin-left: 40px;
+    /* margin-right: 7%; */
+    margin-top: 0px;
+}
+
+.PrivacyPolicyText{
+    position: absolute;
+    left: 60px;
+    top: 73.5%;
+    text-align: left;
+    margin-left: 0%;
+    /* margin-left: 40px; */
+    /* margin-right: 7%; */
+}
+
+.ResetPass {
+    color: rgb(113, 114, 114);
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: 'Literata', sans-serif;
+    padding: 0;
+    border: none;
+    background: none;
+
+    text-decoration: underline;
+    float: right;
+    /*width: 120px;*/
+    margin-right: 5%;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+.PrivacyPolicy {
+    color: #626262;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    text-decoration: underline;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.IncorrectMailText {
+    color: rgb(255, 78, 78);
+    font-size: 10px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.IncorrectPassButton {
+    /* color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    display: inline-block;
+    width: 85%;
+    text-align: center; */
+
+    /* width: 90%; */
+    /* color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: none;
+    text-align: center;
+    margin: 0; */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    color: rgb(227, 253, 251);
+    background-color: #2e332f;
+    cursor: pointer;
+    /* height: 2vh; Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Literata', sans-serif;
+    font-weight: 900;
+}
+
+.IncorrectPassButton:hover {
+    background-color: #425c48;
+}
+
+.IncorrectPassButtonLoginStyle {
+    /* color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    display: inline-block;
+    width: 85%;
+    text-align: center; */
+
+    /* width: 90%; */
+    /* color: rgb(227, 253, 251);
+    font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    border: 1px;
+    background-color: #2e332f;
+    margin-bottom: 0px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: none;
+    text-align: center;
+    margin: 0; */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    color: rgb(227, 253, 251);
+    background-color: #2e332f;
+    cursor: pointer;
+    /* height: 2vh; Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Literata', sans-serif;
+    font-weight: 900;
+    margin-top: 6px;
+}
+
+.IncorrectPassButtonLoginStyle:hover {
+    background-color: #425c48;
+}
+
+/* @media (max-width: 1000px){
+    .Auth {
+        width: 70%;
+        height: 70%;
+        position: absolute;
+        top: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+} */
+
+.Auth input[type=checkbox] {
+    position: absolute;
+      cursor: pointer;
+      /* margin: 10px; */
+      margin-top: 10px;
+      position: absolute;
+    left: 20px;
+      /* margin-left: -5px; */
+}
+
+.Auth input[type=checkbox]:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    border: 2px solid #313437 ;
+    /* border-radius: 3px; */
+    background-color: #313437 ;
+}
+
+.Auth input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.InputWidth {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+@media (max-width: 800px){
+    .Auth {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255) 100%, #2e332f 0%);
+    }
+
+    .NeutralText {
+        font-size: 13px;
+        font-family: 'Literata', sans-serif;
+        /* float: left; */
+        display: inline-block;
+        color: rgb(124, 124, 124);
+        padding-top: 5px;
+    }
+
+    .BottomPanel {
+        background-color: #FFFFFF;
+    }
+
+    .PrivacyPolicyText{
+        position: relative;
+        left: 0;
+        /* top: 41%; */
+        /* text-align: center; */
+        /* margin-left: 40px; */
+        /* margin-right: 15%; */
+        margin-top: 15%;
+        /* margin-left: -120px;  */
+    }
+
+    .YesIWould {
+        margin-right: 7%;
+    }
+}
