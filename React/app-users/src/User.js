@@ -1,72 +1,53 @@
-import React from "react";
+import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import { connect } from 'react-redux';
 
 import "./user.css";
 
-export default class User extends React.Component {
-   static propTypes = {
-     name: PropTypes.string,
-     clickHandler: PropTypes.func
-   };
-
-   state = {
-     dati: [],
-   }
-
-
-
-  handleClick = () => {
-     this.props.clickHandler();
-
-  };
-
-
-
+class User extends Component {
 
   componentDidMount() {
 
-    fetch('https://jsonplaceholder.typicode.com/users')
+    // const id = '';
+    // const name = '';
+    // const username = '';
 
-       .then(response => response.json())
-       .then(json => {
+    const data = [];
 
-      this.setState({dati: json })
-       // this.setState({dati: json});
+      fetch('https://jsonplaceholder.typicode.com/users')
 
-       // json.map((data) => this.setState({dati: data.name}, () => console.log(this.state.dati)));
+     .then(response => response.json())
+     .then(json => {
+         this.props.dispatch({
+           type: 'USER',
+           data: json
+         });
+      })
+
+      //
+      //
+      // this.setState({dati: json })
+      //  // this.setState({dati: json});
+      //
+      //  // json.map((data) => this.setState({dati: data.name}, () => console.log(this.state.dati)));
+    }
 
 
 
-  })
 
-  }
+
+
 
 // onClick={this.handleClick}
 
  render() {
-    const lista = this.state.dati.map((user) =>
-     <div onClick={() => this.handleClick(user.id)} className="box">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" className="imm"/>
-      <div  className='testo'>{user.name} </div>
-      <div className='testo'>{user.username} </div>
-      <div className='testo'>{user.phone} </div>
-      {user.id}
-    </div>
-    )
-
     return(
-        <div>{lista}</div>
-      // <div className="container">
-      //
-      //    <button onClick={this.handleClick} className="button">
-      //       <div className="testo">{this.state.name}</div>
-      //       <br/>
-      //       <div className="testo">{this.state.username}</div>
-      //    </button>
-      //
-      //
-      // </div>
+        <div>
+            <div>{data.name}</div>
+            <div>{data.username}</div>
+            <div>{data.id}</div>
+        </div>
+
 
     );
  }
@@ -89,6 +70,42 @@ export default class User extends React.Component {
 
 
 
+
+// const lista = this.state.dati.map((user) =>
+//  <div onClick={() => this.handleClick(user.id)} className="box">
+//
+//   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRglThl7-B49bmEK7DH_9sVmDXIMLhCIICwTUV8o57ysHMMVeQX" className="imm"/>
+//   <div  className='testo'>{user.name} </div>
+//   <div className='testo'>{user.username} </div>
+//   <div className='testo'>{user.phone} </div>
+//   {user.id}
+// </div>
+
+
+
+
+
+
 // <button onClick={this.handleClick} className="button">
 //    <div>{this.state.username}</div>
 // </button>
+
+
+
+
+
+
+
+
+
+// <div className="container">
+//
+//    <button onClick={this.handleClick} className="button">
+//       <div className="testo">{this.state.name}</div>
+//       <br/>
+//       <div className="testo">{this.state.username}</div>
+//    </button>
+//
+//
+// </div>
+export default connect()(User)

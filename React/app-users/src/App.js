@@ -1,19 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
 import Header from "./Header"
-import Main from "./main"
+import Main from "./Main"
 
-export default class App extends React.Component {
-  constructor() {
-      super();
-
-     this.state = {
-
-  };
-
-}
-
+ class App extends Component {
 
 render() {
    return (
@@ -29,12 +18,11 @@ render() {
 
 // className="component-app"
 
-
-
    );
 
 }
 
-
-
 }
+
+
+export default App;
