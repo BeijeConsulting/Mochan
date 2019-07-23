@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Modal from '../../components/UI/Modal/Modal';
-import Aukz from '../Aukz/Aukz'
 
 const withErrorHandler = (WrappedComponent, axios) => {
     return class extends Component {
@@ -17,7 +16,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
                 });
                 return request;
             });
-            this.resInterceptor = axios.interceptors.response.use(response => response, error => {
+            this.resInterceptor = axios.interceptors.response.use(response => (response, error) => {
                 this.setState({
                     error: error
                 })
@@ -37,17 +36,15 @@ const withErrorHandler = (WrappedComponent, axios) => {
 
         render(){
         return (
-            <Aukz>
+            <div>
                 <Modal disp={this.state.error} modalOut={this.errorConfirmedHandler}>
                     {this.state.error ? this.state.error.message : null}
                 </Modal>
                 <WrappedComponent {...this.props} />
-            </Aukz>
+            </div>
         );
     }
     }
 }
-
-
 
 export default withErrorHandler
