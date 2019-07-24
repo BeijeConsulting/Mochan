@@ -1,8 +1,32 @@
 <!--JavaScript - Move Object with Arrow Keys using JavaScript Function.-->
 <html>
 	<head>
+<<<<<<< HEAD
 
 <link rel="stylesheet" type="text/css" href="moveObject.css"/>
+=======
+<<<<<<< HEAD
+
+<link rel="stylesheet" type="text/css" href="moveObject.css"/>
+=======
+<style media="screen">
+div.static {
+  position: static;
+  width: 99%;
+  height: 99%;
+  border: 3px solid #00AF20;
+}
+.square {
+  position : relative;
+  top : 50px;
+  left : 50px;
+  height: 100px;
+  width: 100px;
+  background-color: #555;
+}
+</style>
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 		<script type="text/javascript">
 			//init object globally
 			var objBox= null;
@@ -10,7 +34,15 @@
 				objBox=document.getElementById("box");
 				objBox.style.position='relative';
 				objBox.style.left='50px';
+<<<<<<< HEAD
 				objBox.style.top ='500px';
+=======
+<<<<<<< HEAD
+				objBox.style.top ='500px';
+=======
+				objBox.style.top='50px';
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 			}
 				function getKeyAndMove(e){
 					var key_code = e.keyCode;
@@ -26,10 +58,21 @@
 					else if (key_code == 40) {
 							moveDown()
 						}//down arrow key
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 				pixel = objBox.style.position
 				console.log(pixel);
 				}
 
+<<<<<<< HEAD
+=======
+=======
+
+				}
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 			function moveLeft(){
 				objBox.style.left=parseInt(objBox.style.left)-3 +'px';
 			}
@@ -43,14 +86,31 @@
 				objBox.style.top=parseInt(objBox.style.top)+3 +'px';
 			}
 			window.onload=init;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 		</script>
 	</head>
 
 	<body onkeydown='getKeyAndMove(event)'>
+<<<<<<< HEAD
 		<div class="static">
 			<div id = "box" class="square">
 			</div>
+=======
+<<<<<<< HEAD
+		<div class="static">
+			<div id = "box" class="square">
+			</div>
+=======
+		<div class="static"> <div id = "box" class="square"> </div>
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 		</div>
 
 	</body>

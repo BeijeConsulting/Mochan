@@ -7,6 +7,10 @@
 <p> ...</p>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 <form  id=tsform action="" method="get" onsubmit="return confirm('Are you sure you want to submit?');" > <br>
 <input type="int" id=id value="0" name="id"> <br>
 first name: <br>
@@ -22,10 +26,35 @@ fiscalCode:<br>
 password:<br>
 <input type="password" id="pwd" name="password" <br>
 <br>
+<<<<<<< HEAD
+=======
+=======
+<form  id=timeSheetForm action="" method="get" onsubmit="return confirm('Are you sure you want to submit?');" >
+Id: <br>
+<input 'Id' type="int" id=attId value="0" name="id"> <br>
+first name: <br>
+<input 'name' type="text" id=firstName value="Mario" name="fname"> <br>
+last name: <br>
+<input type="text" id=lastName value="Rossi" name="lname"><br>
+personal email: <br>
+<input type="email" id=personalEmail value="Mario@rossi.it" name="pmail"><br>
+workEmail:<br>
+<input type="email" id=workEmail value="Mario.rossi@beije.it" name="wmail"><br>
+fiscalCode:<br>
+<input type="text" id=fiscaleCode value="ABCDEF123456" name="fcode"><br>
+password:<br>
+<input type="password" id="pass" name="password"
+<br><br>
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 <input type="submit">
 </form>
 
 <script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 
 var formData = new FormData();
 formData.append('id', '7');
@@ -40,6 +69,22 @@ formData.append('pwd', 'value2');
 for (var value of formData.values()) {
    console.log(value);
 }
+<<<<<<< HEAD
+=======
+=======
+let b = ""
+let formd = document.getElementById('timeSheetForm');
+var formd = new FormData();
+//console.log(formData);
+
+for(var pair of formd.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+
+
+}
+console.log(formd);
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 </script>
 </body>
 </html>

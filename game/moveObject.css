@@ -1,4 +1,8 @@
 <style media="screen">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
 .static {
   position: static;
   width: 99%;
@@ -8,6 +12,20 @@
 .square {
   position : relative;
   top : bottom: 50px ;
+<<<<<<< HEAD
+=======
+=======
+div.static {
+  position: static;
+  width: 99%;
+  height: 99%;
+  border: 3px solid #00AF20;
+}
+.square {
+  position : relative;
+  top : 50px;
+>>>>>>> 29c7292c5f028de4c78b135bd3754c9b467fa988
+>>>>>>> 76d4ba287d99eee82962d654ae4d7b90a2917ee1
   left : 50px;
   height: 100px;
   width: 100px;
