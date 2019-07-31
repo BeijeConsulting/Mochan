@@ -1,0 +1,6 @@
+<div *ngFor="let user of users">
+<h3>{{user.name}}</h3>
+<p>{{user.email}}</p>
+<a routerLink="/user/{{user.id}}"><div>Scheda</div></a>
+<a routerLink="/album/{{user.id}}"><div>Album</div></a>
+</div>
