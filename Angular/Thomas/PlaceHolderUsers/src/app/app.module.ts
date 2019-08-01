@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserAlbumComponent } from './user-album/user-album.component';
 import { MapComponent } from './map/map.component';
+import { PhotosComponent } from './photos/photos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MapComponent } from './map/map.component';
     UsersComponent,
     UserDetailComponent,
     UserAlbumComponent,
-    MapComponent
+    MapComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,

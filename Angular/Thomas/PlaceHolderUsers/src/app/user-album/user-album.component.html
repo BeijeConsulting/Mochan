@@ -1,5 +1,6 @@
 <div *ngIf="albums">
+        <button (click)="goBack()">Torna indietro</button>
     <div *ngFor="let album of albums">
-        <h3>{{album.title}}</h3>
+        <a routerLink="/photos/{{album.id}}" [state]="album"><h3>{{album.title}}</h3></a>
     </div>
 </div>

@@ -1,0 +1,12 @@
+<div>
+        <button (click)="goBack()">Torna indietro</button>
+    <h2>{{title}}</h2>
+<div *ngFor="let photo of photos">
+    <a href="{{photo.url}}">
+        <div>
+            <img src="{{photo.thumbnailUrl}}" alt="{{photo.title}}">
+            <p>{{photo.title}}</p>
+        </div>
+    </a>
+</div>
+</div>

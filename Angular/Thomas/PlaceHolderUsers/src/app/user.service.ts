@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs'
 import { user } from './user' 
 import { catchError, map, tap } from 'rxjs/operators'
 import { album } from './album'
+import { Photo } from './photo';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ import { album } from './album'
 export class UserService {
 private usersurl = 'https://jsonplaceholder.typicode.com/users'
 private albumsurl = 'https://jsonplaceholder.typicode.com/albums'
+private photosurl = 'https://jsonplaceholder.typicode.com/photos'
   constructor(
     private http: HttpClient
   ) { }
@@ -43,6 +45,14 @@ private albumsurl = 'https://jsonplaceholder.typicode.com/albums'
     return this.http.get<album[]>(url)
     .pipe(
       catchError(this.handleError<album[]>(`getAlbum userId=${id}`))
+    )
+  }
+
+  getPhotos(id: number) : Observable<Photo[]> {
+    const url = `${this.photosurl}?albumId=${id}`
+    return this.http.get<Photo[]>(url)
+    .pipe(
+      catchError(this.handleError<Photo[]>(`getPhoto albumId=${id}`))
     )
   }
 
