@@ -1,0 +1,16 @@
+<div *ngIf="user">
+    <h2>{{user.name | uppercase}} Details</h2>
+    <div><span>email: </span>{{user.email}}</div>
+    <div><span>phone: </span>{{user.phone}}</div>
+    <div><span>città: </span>{{user.address.city}}</div>
+    
+    <button (click)="goBack()">go back</button>
+
+    <ul class="posts">
+        <li *ngFor="let post of posts">
+            <div><span>Titolo: </span>{{post.title}}</div>
+            <div><span>Testo: </span>{{post.body}}</div><br>
+        </li>
+    </ul>
+</div>
+
