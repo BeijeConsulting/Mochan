@@ -1,0 +1,14 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.badge {
+  border: 2px solid black;
+  height: 100px;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}

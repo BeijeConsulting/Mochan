@@ -1,0 +1,14 @@
+<div *ngIf="user">
+  <h3>{{user.name | uppercase}} Details </h3>
+  <h4>
+   <div *ngIf="this.router.url === '/informations/'+user.id ; else nonmostrare"><a routerLink="/album/{{user.id}}"> Album </a></div>
+  </h4>
+  <div class="dati">
+    <div><span>id: </span>{{user.id}}</div>
+    <div><span>username: </span>{{user.username}}</div>
+    <div><span>email: </span>{{user.email}}</div>
+    <div><span>street: </span>{{user.address.street}}</div>
+    <div><span>city: </span>{{user.address.city}}</div>
+  </div>
+  </div>
+<ng-template #nonmostrare></ng-template>

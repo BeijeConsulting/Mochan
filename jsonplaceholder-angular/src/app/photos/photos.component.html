@@ -1,0 +1,8 @@
+ <div class="photos" *ngIf="photos">
+    <div *ngFor="let photo of photos">
+      <img src="{{photo.thumbnailUrl}}">
+    </div>
+ </div>
+ <app-album></app-album>
+
+

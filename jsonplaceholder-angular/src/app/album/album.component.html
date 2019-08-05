@@ -1,0 +1,6 @@
+<div class="titoli">
+  <app-schedadati [user]="user"></app-schedadati>
+  <div *ngFor="let album of albums">
+    <a routerLink="/photos/{{album.id}}">{{album.title}}</a>
+    </div>
+</div>

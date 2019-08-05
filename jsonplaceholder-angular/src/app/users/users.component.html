@@ -1,0 +1,14 @@
+<div class="cards">
+  <div *ngFor="let user of users">
+    <div class="badge">{{user.name}}
+      <div class="schedautente">
+        <a routerLink="/informations/{{user.id}}">Dati Utente</a>
+      </div>
+      <div class="album">
+        <a routerLink="/album/{{user.id}}"AlbumComponent> Album </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
